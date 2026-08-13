@@ -32,6 +32,20 @@ jobs:
       - name: Add Android platform
         run: npx cap add android
 
+      - name: Patch plugin (auto-dismiss notification after 30s)
+        run: |
+          sed -i 's|\.setOngoing(localNotification\.isOngoing())|.setOngoing(localNotification.isOngoing())\n                .setTimeoutAfter(30000)|' node_modules/@capacitor/local-notifications/android/src/main/java/com/capacitorjs/plugins/localnotifications/LocalNotificationManager.java
+
+      - name: Set custom app icon
+        run: |
+          RES=android/app/src/main/res
+          rm -rf $RES/mipmap-anydpi-v26
+          for d in mdpi hdpi xhdpi xxhdpi xxxhdpi; do
+            mkdir -p $RES/mipmap-$d
+            cp resources/icon.png $RES/mipmap-$d/ic_launcher.png
+            cp resources/icon.png $RES/mipmap-$d/ic_launcher_round.png
+          done
+
       - name: Build APK
         run: cd android && chmod +x gradlew && ./gradlew assembleDebug
 
