@@ -337,3 +337,31 @@ body {
   z-index: 5;
 }
 .game-overlay.hidden { display: none !important; }
+
+
+/* 🔔 مودال یادآور — کامل روی صفحه */
+.rem-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+}
+.rem-overlay.hidden { display: none; }
+.rem-modal {
+  background: var(--card, #fff);
+  border-radius: 24px;
+  padding: 24px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  max-height: 85vh;
+  overflow-y: auto;
+}
