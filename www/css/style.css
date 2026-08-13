@@ -322,3 +322,18 @@ body {
 /* 📏 یکسان‌سازی ارتفاع کادرهای سربرگ */
 .search-box span { padding: 13px 0; font-size: 14px; color: #8a8a8a; }
 .search-row .add-btn { width: 50px; height: 48px; border-radius: 16px; }
+
+
+/* 🛠️ سازگاری با WebView قدیمی */
+.game-wrap { position: relative !important; }
+.game-overlay {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+  width: auto !important; height: auto !important;
+  display: flex !important;
+  align-items: center; justify-content: center;
+  background: rgba(255, 245, 247, .92) !important;
+  border-radius: 16px;
+  z-index: 5;
+}
+.game-overlay.hidden { display: none !important; }
