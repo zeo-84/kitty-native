@@ -1,0 +1,26 @@
+{
+  "name": "Kitty App",
+  "short_name": "Kitty",
+  "description": "دستیار شخصی با گربه‌ی بامزه",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBF5F6",
+  "theme_color": "#EFA0AE",
+  "lang": "fa",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "images/kitty_logo2.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "images/kitty_logo2.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
